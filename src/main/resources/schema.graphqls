@@ -1,0 +1,14 @@
+type Query {
+    findAllUsers: [User]!
+    findUserById(id: ID!): User
+}
+
+type Mutation {
+    createUser(username: String!, email: String!, password: String!): Boolean
+}
+
+type User {
+    id: ID!
+    username: String!
+    email: String!
+}

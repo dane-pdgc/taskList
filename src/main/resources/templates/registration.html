@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Task Tracker App</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Dane's Task Tracker!</h1>
+    <p>Your personal task management tool</p>
+
+    <div class="forms-container">
+
+
+        <div class="form-box">
+            <div th:replace="fragments/register :: register-form"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

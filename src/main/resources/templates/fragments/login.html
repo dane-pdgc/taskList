@@ -1,0 +1,19 @@
+
+<div th:fragment="login-form">
+            <form th:action="@{users/login}" method="post">
+
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit">Log In</button>
+            </form>
+    <div class="login-footer">
+        <hr>
+        <p>Don't have an account? <a href="/register">Create one</a></p>
+    </div>
+    </div>

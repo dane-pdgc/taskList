@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks Today</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+
+</head>
+<body>
+<header>
+    <h1>Tasks Today</h1>
+</header>
+
+<main>
+    TaskList:
+    <ul id="taskList">
+        <li th:each="task : ${tasks}">
+            <span th:text="${task.taskDesc}">Task Description</span>
+            <!-- Additional task details can be added here -->
+        </li>
+    </ul>
+</main>
+
+<footer>
+    <form id="createTaskForm" action="path_to_your_endpoint" method="post">
+        <input type="text" id="createTask" name="task" placeholder="Create Task">
+        <button type="submit">Add</button>
+    </form>
+</footer>
+</body>
+</html>

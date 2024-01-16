@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Task Tracker App</title>
+    <!-- Include Bootstrap CSS -->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div class="container">
+    <h1>Dane's Task Tracker</h1>
+    <p>Your personal task management tool</p>
+
+    <div class="forms-container">
+
+
+        <div class="form-box">
+            <!-- In your login fragment within index.html -->
+            <div th:if="${loginError}" class="alert alert-danger" th:text="${loginError}"></div>
+
+            <div th:replace="fragments/login :: login-form"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
